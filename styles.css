@@ -1,0 +1,883 @@
+/* ==========================================================
+   General Reset: Ensures consistent styling across browsers.
+   ========================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ==========================================================
+     Body Styling: Set up basic font and layout.
+     ========================================================== */
+  body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  /* ==========================================================
+     Main Container: Flexbox for layout.
+     ========================================================== */
+  .container {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* ==========================================================
+     Sidebar Styling: Fixed layout with profile and nav links.
+     ========================================================== */
+  .sidebar {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between links and copyright */
+  }
+  
+  /* Profile section in sidebar */
+  .profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .profile h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .profile p {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  /* Navigation links in sidebar */
+  .nav-links {
+    margin-bottom: 100px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #555;
+    display: block;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    transition: color 0.3s, text-decoration 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #007bff;
+    text-decoration: underline;
+  }
+  
+  .nav-links p {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 170px; /* Add spacing before copyright */
+  }
+  
+  /* Highlight active link */
+  .nav-links a.active {
+    color: #007bff;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  /* ==========================================================
+     Main Content Area: Flex-based layout with padding.
+     ========================================================== */
+  main {
+    flex: 1;
+    padding: 40px;
+    margin-left: 250px;
+    text-align: center;
+    overflow-y: auto; /* Allow scrolling if content is too large */
+  }
+  
+  /* ==========================================================
+     Hero Section: Full-screen section with background image.
+     ========================================================== */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-image: url('DALL·E\ 2024-11-22\ 22.55.00\ -\ A\ sleek\ and\ minimalistic\ white\ tech-themed\ background\ image\ suitable\ for\ a\ portfolio\,\ featuring\ subtle\ abstract\ geometric\ shapes\,\ soft\ gradients\,\ and\ .webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    padding: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Text shadow for better readability */
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #333;
+  }
+  
+  .hero button {
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+      background-color: transparent; /* Make background transparent */
+      border: 2px solid #007bff; /* Add a border for visibility */
+      color: #007bff; /* Button text color */
+      padding: 10px 20px; /* Add padding for button size */
+      text-decoration: none; /* Remove underline */
+      font-size: 1rem; /* Font size for readability */
+      font-weight: bold; /* Make text bold */
+      border-radius: 5px; /* Slightly rounded corners */
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    
+  }
+  
+  .hero button a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .hero button:hover {
+    background-color: #007bff; /* Fill with blue on hover */
+    color: #fff; /* White text color on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  /* ==========================================================
+     About Section: Basic text layout for the about information.
+     ========================================================== */
+  .about {
+    padding: 60px 20px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .about h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .about p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .about p strong {
+    font-weight: 700;
+    color: #333;
+  }
+  
+  /* ==========================================================
+     Button Styling (Reusable): Standard button appearance.
+     ========================================================== */
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* ==========================================================
+     Education Section: Text layout for educational information.
+     ========================================================== */
+     education {
+      padding: 40px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+    
+    .education h2 {
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      color: #333;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+    
+    /* Accordion Styles */
+    .accordion {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .accordion-item {
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #f4f4f4;
+      color: #333;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      text-align: left;
+      width: 100%;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    .accordion-header:hover {
+      background-color: #eaeaea;
+    }
+    
+    .accordion-header .icon {
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    
+    .accordion-header.active .icon {
+      transform: rotate(45deg); /* Changes "+" to "x" on click */
+    }
+    
+    .accordion-content {
+      display: none;
+      padding: 15px 20px;
+      background-color: #f9f9f9;
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    /* Active State */
+    .accordion-content.show {
+      display: block;
+    }
+    
+  
+  /* ==========================================================
+     Skills Section: Layout for skill bars and proficiency.
+     ========================================================== */
+  .skills {
+    padding: 40px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .skills h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .skills h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .skills p {
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .skill {
+    width: 80%;
+  }
+  
+  .skill span {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Skill Progress Bars */
+  .bar {
+    position: relative;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background: #007bff;
+    border-radius: 5px;
+  }
+  
+  .percentage {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    font-size: 0.8rem;
+    color: #555;
+  }
+  
+  .progress {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+  }
+  
+  .python {
+    background-color: #4CAF50; /* Green */
+  }
+  
+  .javascript {
+    background-color: #F7DF1E; /* Yellow */
+  }
+  
+  .html5 {
+    background-color: #E34C26; /* Orange/Red */
+  }
+  
+  .css3 {
+    background-color: #264de4; /* Blue */
+  }
+  
+  .sql {
+    background-color: #f29111; /* Light Orange */
+  }
+  
+  .progress:hover {
+    filter: brightness(1.2); /* Slightly brighten the bar */
+    transition: filter 0.3s ease-in-out;
+  }
+  
+/* ==========================================================
+   Interests Section
+   ========================================================== */
+   .interests-section {
+    padding: 50px 20px; /* Added horizontal padding for better spacing */
+    padding-top: 20px; /* Reduced top padding */
+    background-color: #f7f9fc; /* Slightly different background for distinction */
+  }
+  
+  .section-title {
+    font-size: 2.5rem; /* Increased size for emphasis */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px; /* Slightly more space below the title */
+    text-align: center;
+    color: #222; /* Darker color for contrast */
+    letter-spacing: 1px; /* Added spacing for a clean look */
+  }
+  
+  .interests-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Added consistent spacing between items */
+  }
+  
+  .row h2 {
+    text-align: center;
+    font-size: 1.8rem; /* Adjusted font size */
+    color: #444;
+  }
+  
+  .interest-item {
+    flex: 1 1 calc(33.333% - 20px); /* Three items per row with spacing */
+    max-width: calc(33.333% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .interest-item:hover {
+    transform: translateY(-8px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  }
+  
+  .int {
+    height: auto; /* Adjusted height to fit content */
+    background-color: transparent; /* Transparent background for cleaner layout */
+    margin-bottom: 20px; /* Reduced margin */
+    text-align: center;
+  }
+  
+  .int h2 {
+    padding-top: 0px; /* Reduced padding for better alignment */
+    font-size: 2rem;
+    color: #555; /* Slightly muted color */
+  }
+  
+  .interest-card {
+    background: #fff;
+    border-radius: 12px; /* Softer corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 25px; /* Increased padding for better spacing */
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .interest-card:hover {
+    transform: translateY(-5px);
+    background-color: #f0f4f8; /* Light background on hover */
+  }
+  
+  .interest-card img {
+    max-width: 70%; /* Slightly smaller image */
+    height: auto;
+    margin-bottom: 15px; /* Adjusted spacing below image */
+    border-radius: 4px; /* Added subtle rounding to images */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the image */
+    transition: transform 0.3s ease; /* Image hover effect */
+  }
+  
+  .interest-card img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  .interest-card h3 {
+    font-size: 1.3rem; /* Increased heading size */
+    margin-bottom: 12px;
+    color: #222; /* Darker color for better readability */
+    font-weight: 600; /* Slightly bolder text */
+  }
+  
+  .interest-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6; /* Better readability */
+    margin-bottom: 10px; /* Consistent spacing */
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 768px) {
+    .interests-section {
+      padding: 30px 10px; /* Reduced padding for smaller screens */
+    }
+  
+    .interest-item {
+      flex: 1 1 100%; /* Stack items vertically */
+      max-width: 100%;
+    }
+  
+    .interest-card img {
+      max-width: 60%; /* Adjust image size for smaller screens */
+    }
+  
+    .interest-card h3 {
+      font-size: 1.2rem; /* Adjust heading size */
+    }
+  
+    .interest-card p {
+      font-size: 0.9rem; /* Adjust paragraph size */
+    }
+  }
+  
+/* ==========================================================
+   Projects Section
+   ========================================================== */
+   #projects {
+    padding: 60px 20px; /* Added horizontal padding for better spacing */
+    background-color: #f9fafb; /* Softer background color */
+  }
+  
+  .projects-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    justify-content: center; /* Centers the projects */
+    gap: 30px; /* Even spacing between cards */
+  }
+  
+  .project-card {
+    position: relative;
+    width: 300px; /* Fixed width for consistency */
+    background-color: #fff;
+    border-radius: 12px; /* Slightly more rounded corners */
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Enhanced hover effect */
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #f1f1f1; /* Subtle border for separation */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .project-card:hover img {
+    opacity: 0.9; /* Slight fade effect */
+    transform: scale(1.02); /* Gentle zoom on hover */
+  }
+  
+  .project-info {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .project-info h3 {
+    font-size: 1.3rem; /* Increased for better readability */
+    color: #333;
+    margin: 20px 0 10px; /* Adjusted spacing for consistency */
+  }
+  
+  .project-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5; /* Improved text spacing */
+  }
+  
+  .project-info .btn {
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+      background-color: transparent; /* Make background transparent */
+      border: 2px solid #007bff; /* Add a border for visibility */
+      color: #333; /* Button text color */
+      padding: 10px 20px; /* Add padding for button size */
+      text-decoration: none; /* Remove underline */
+      font-size: 1rem; /* Font size for readability */
+      font-weight: bold; /* Make text bold */
+      border-radius: 5px; /* Slightly rounded corners */
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .project-info .btn:hover {
+    background-color: #007bff; /* Fill with blue on hover */
+    color: #fff; /* White text color on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 768px) {
+    #projects {
+      padding: 40px 10px; /* Reduced padding for smaller screens */
+    }
+  
+    .projects-wrapper {
+      flex-direction: column; /* Stack cards vertically */
+      gap: 20px;
+    }
+  
+    .project-card {
+      width: 100%; /* Full width for smaller screens */
+      max-width: 400px; /* Limit max width */
+      margin: 0 auto; /* Center cards */
+    }
+  
+    .project-info h3 {
+      font-size: 1.4rem; /* Adjusted for smaller screens */
+    }
+  
+    .project-info p {
+      font-size: 0.95rem; /* Slightly smaller text */
+    }
+  
+    .project-info .btn {
+      font-size: 0.9rem; /* Adjust button text size */
+      padding: 10px 20px; /* Adjust button size */
+    }
+  }
+  
+
+/* ==========================================================
+   Contact Section
+   ========================================================== */
+#contact {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.contact-details {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-details p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.contact-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  margin-top: 70px;
+}
+
+.contact-details li {
+  margin-bottom: 10px;
+}
+
+.contact-details a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.contact-form p {
+  font-size: 16px;
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input[type="text"], input[type="email"] {
+  height: 40px;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+#contact button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #007bff;
+}
+
+#form-status {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+
+
+/* Basic Reset */
+body, h1, p, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  z-index: 50;
+  transition: left 0.3s ease-in-out;
+  padding-top: 60px; /* Add space for content */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 20px;
+  color: white;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+/* Mobile and Tablet Styles */
+@media screen and (max-width: 768px) {
+  /* Show the hamburger button on mobile */
+  .hamburger {
+    display: block;
+  }
+
+  /* Initially hide the sidebar on small screens */
+  .sidebar {
+    left: -250px; /* Sidebar hidden */
+  }
+
+  /* Show sidebar when it's toggled */
+  .sidebar.open {
+    left: 0; /* Show sidebar */
+  }
+
+  /* Adjust the main content when sidebar is visible */
+  main {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+  }
+
+  .sidebar.open + main {
+    margin-left: 250px;
+  }
+}
+
+
+
+
+
+
+/* General font styles */
+body {
+  font-family: 'Source Sans Pro', sans-serif; /* Default font for body text */
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333; /* Adjust color based on your design */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600; /* Use bold for emphasis */
+  color: #222; /* Slightly darker for contrast */
+}
+
+/* Buttons */
+button, .btn {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Forms and labels */
+label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+input, textarea {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+
+
+
+
+
